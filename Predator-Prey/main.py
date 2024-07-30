@@ -73,6 +73,8 @@ class LotkaVolterra:
     def plot(self, h, T):
         R, P = self.solve(h, T)
         t = np.arange(0, T+h, h)
+        print(f"Preys: {np.round(R[-1])}")
+        print(f"Predators: {np.round(P[-1])}")
         
         plt.figure(figsize=(10, 5))
         plt.plot(t, R, label='Preys (R)')
